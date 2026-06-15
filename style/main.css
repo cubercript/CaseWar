@@ -1,0 +1,52 @@
+/* 
+
+==================================================================================
+==================================== GLOBAL CSS ==================================
+==================================================================================
+
+*/
+
+
+:root{
+
+
+    /* Paleta de colores */
+
+
+
+    /* Tamaño de texto */
+
+
+
+    /* Fuentes */
+
+
+
+
+}
+
+
+/* CONFIG */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CLASES PREDEFINIDAS */
+.left, .right{width: 50%;}
+
+.column{flex-direction: column;}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+
+
+
