@@ -105,5 +105,5 @@ p, button, body, a, span{font-size: var(--fs-body); margin: 0; padding: 0;}
 
 .radius{border-radius: 15px;}
 
-
+.oculto{display: none;}
 
