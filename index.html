@@ -41,14 +41,55 @@
     </header>
 
 
-    <main>
+    <main class="main flex">
 
         <!-- Lateral izquierdo (user) -->
-        <div class="left"></div>
+        <div class="user-desktop left align-middle justify-middle flex column">
+
+            <!-- Caja de la ruleta -->
+            <div class="box-roulette radius">
+
+                <!-- Items de la ruleta -->
+                <div id="roulette" class="roulette"></div>
+
+
+                <!-- Botones en absolute dentro de la ruleta -->
+                <div class="buttons align-middle justify-middle flex column max">
+
+                    <button id="tirarCaja" class="tirarCaja radius">Tirar caja</button>
+                    <button id="venderArma" class="venderArma radius oculto">Vender arma</button>
+                    <button id="luchar" class="luchar radius oculto">Luchar</button>
+
+                </div>
+            </div>
+
+            <br><br>
+
+            <h2 class="stats-title">Estadísticas</h2>
+
+            <!-- Tabla de stats -->
+            <div class="table-container">
+
+
+                <table>
+                    <thead>
+                        <th>Prueba</th>
+                    </thead>
+                    <tr>
+                        <td>prueba</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
 
         
         <!-- Lateral derecho (bot) -->
-        <div class="right"></div>
+        <div class="right">
+
+        </div>
 
     </main>
 
