@@ -7,46 +7,103 @@
 */
 
 
+/* VARIABLES */
 :root{
 
 
     /* Paleta de colores */
+    --bg-dark: #0f1015;
+    --bg-card: #191b24;
 
+    --primary: #576AB5;
+    --text-muted: #8a92b2;
+
+    --white: #FFFFFF;
+    --black: #121318;
+
+    --accent-gold: #F5C438;
+    --accent-blue: #385EF5;
+    
+    --rarity-common: #8e95a5;
+    --rarity-rare: #4b69ff;
+    --rarity-mystical: #d32ce6;
+    --rarity-legendary: #eb4b4b;
+
+    --bank: #2d8067;
+    --bank-win: #2ecc71;
+    --resets: #933a3a;
+    --lost: #ff4d4d;
 
 
     /* Tamaño de texto */
-
+    --fs-hero: clamp(1.8rem, 4vw + 1rem, 2.8rem);
+    --fs-title-lg: clamp(1.4rem, 2.5vw + 1rem, 2rem);
+    --fs-title-md: clamp(1.1rem, 1.5vw + 1rem, 1.35rem);
+    --fs-body: clamp(0.95rem, 0.5vw + 0.8rem, 1.05rem);
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
 
 
     /* Fuentes */
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
-
+    --font-titles: 'Kanit', sans-serif;
+    --font-body: 'Roboto Mono', monospace;
 
 }
+
+
 
 
 /* CONFIG */
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: var(--bg-dark);
+    color: var(--primary);
 }
+
+*{box-sizing: border-box;}
+
+h1, h2, h3, h4, h5, h6{font-family: var(--font-titles);}
+p, button, body, a, span{font-family: var(--font-body);}
+
+
+h1{font-size: var(--fs-hero);}
+h2{font-size: var(--fs-title-lg);}
+h3{font-size: var(--fs-title-md);}
+
+p, button, body, a, span{font-size: var(--fs-body); margin: 0; padding: 0;}
+
+
 
 
 /* CLASES PREDEFINIDAS */
 .left, .right{width: 50%;}
+.max{width: 100%; height: 100%;}
 
 .column{flex-direction: column;}
 
 .flex{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
 }
 
 
+.align-middle{align-items: center; align-content: center;}
+.text-center{text-align: center;}
+.text-end{text-align: end;}
+.justify-middle{justify-content: center; justify-items: center;}
+.justify-end{justify-content: end; justify-items: end;}
 
+.common{color: var(--rarity-common);}
+.rare{color: var(--rarity-rare);}
+.mystical{color: var(--rarity-mystical);}
+.legendary{color: var(--rarity-legendary);}
+
+
+.radius{border-radius: 15px;}
 
 
 

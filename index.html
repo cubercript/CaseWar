@@ -14,11 +14,29 @@
 <body>
 
     <!-- Menú principal / Saldo del jugador / Reinicios del jugador -->
-    <header>
+    <header class="flex align-middle">
 
-        <div class="left"></div>
+        <div class="menu left flex max align-middle">
 
-        <div class="right"></div>
+            <p id="info" class="menu-item">Info</p>
+            <p id="colection" class="menu-item">Colección</p>
+            <p id="store" class="menu-item">Tienda</p>
+
+        </div>
+
+        <div class="right justify-end max">
+            <div class="status flex radius">
+
+                <div class="bank align-middle left">
+                    <p id="bank"><strong>Dinero: 0€</strong></p>
+                </div>
+                
+                <div class="resets align-middle right">
+                    <p id="resets"><strong>Resets: 0</strong></p>
+                </div>
+
+            </div>
+        </div>
 
     </header>
 
