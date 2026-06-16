@@ -96,6 +96,7 @@ p, button, body, a, span{font-size: var(--fs-body); margin: 0; padding: 0;}
 .text-end{text-align: end;}
 .justify-middle{justify-content: center; justify-items: center;}
 .justify-end{justify-content: end; justify-items: end;}
+.self-middle{justify-self: center; align-self: center;}
 
 .common{color: var(--rarity-common);}
 .rare{color: var(--rarity-rare);}
