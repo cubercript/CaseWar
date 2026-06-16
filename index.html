@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style/index.css">
 
 </head>
-<body>
+<body class="body">
 
     <!-- Menú principal / Saldo del jugador / Reinicios del jugador -->
-    <header class="flex align-middle">
+    <header class="header flex align-middle">
 
         <div class="menu left flex max align-middle">
 
@@ -41,6 +41,13 @@
     </header>
 
 
+    <!-- Cuadrado VS -->
+    <div class="vs-content max align-middle justify-middle">
+        <p class="vs text-center align-middle radius">VS</p>
+    </div>
+
+
+    <!-- Contenido de la página -->
     <main class="main flex">
 
         <!-- Lateral izquierdo (user) -->
@@ -69,14 +76,22 @@
 
             <!-- Tabla de stats -->
             <div class="table-container">
-
-
-                <table>
-                    <thead>
-                        <th>Prueba</th>
-                    </thead>
+                <table class="max">
+                    <tr class="line">
+                        <td class="left-table weapon">Arma</td>
+                        <td class="right-table weapon" id="weapon"></td>
+                    </tr>
                     <tr>
-                        <td>prueba</td>
+                        <td class="left-table damage">Daño</td>
+                        <td class="right-table damage" id="damage"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-table value">Valor</td>
+                        <td class="right-table value" id="value"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-table-bottom type">Tipo</td>
+                        <td class="right-table-bottom type" id="type"></td>
                     </tr>
                 </table>
             </div>
@@ -87,8 +102,40 @@
 
         
         <!-- Lateral derecho (bot) -->
-        <div class="right">
+        <div class="right align-middle justify-middle flex column">
+            <!-- Caja de la ruleta -->
+            <div class="box-roulette radius">
 
+                <!-- Items de la ruleta -->
+                <div id="bot-roulette" class="roulette"></div>
+
+            </div>
+
+            <br><br>
+
+            <h2 class="stats-title">Estadísticas</h2>
+
+            <!-- Tabla de stats -->
+            <div class="table-container">
+                <table class="max">
+                    <tr class="line">
+                        <td class="left-table weapon">Arma</td>
+                        <td class="right-table weapon" id="bot-weapon"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-table damage">Daño</td>
+                        <td class="right-table damage" id="bot-damage"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-table value">Valor</td>
+                        <td class="right-table value" id="bot-value"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-table-bottom type">Tipo</td>
+                        <td class="right-table-bottom type" id="bot-type"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
     </main>
@@ -99,6 +146,7 @@
 
     <!-- ZONA DE SCRIPTS -->
     <script src="bbdd/bbdd.js"></script>
+    <script src="logic/variables.js"></script>
     <script src="logic/tirarCaja.js"></script>
     <script src="logic/tirarLucha.js"></script>
     <script src="logic/vender.js"></script>
