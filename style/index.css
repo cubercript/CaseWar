@@ -81,7 +81,7 @@
 
 .status{
 
-    width: 350px;
+    width: 400px;
     height: 100%;
     background-color: var(--bg-card);
     gap: 0;
@@ -94,6 +94,11 @@
     color: var(--bank);
     border-right: 2px solid var(--primary);
     margin-right: 0;
+    position: relative;
+}
+
+.money, .resetNumber, .money-event{
+    font-size: var(--fs-title-md);
 }
 
 .resets{
@@ -264,4 +269,28 @@ td{padding: 15px;}
 .type{
     color: var(--accent-gold);
 }
+
+
+
+
+
+.money-event{
+
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: 10;
+    transition: all 2s;
+    transform: translateY(0);
+
+}
+
+.lost{
+    color: var(--lost);
+}
+
+.win{
+    color: var(--bank-win);
+}
+
 

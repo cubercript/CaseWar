@@ -14,6 +14,7 @@ var bank = document.getElementById("bank").value;
 var money = document.getElementById("money");
 var resets = document.getElementById("resets").value;
 var totalResets = document.getElementById("totalResets");
+var moneyEvent = document.getElementById("money-event");
 
 
 // --> Ruleta
