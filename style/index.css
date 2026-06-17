@@ -135,6 +135,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--bg-card);
+    padding: 20px;
 
 }
 
@@ -166,15 +167,17 @@ img{
 
 
 .venderArma{
-    color: var(--bank);
+    color: var(--white);
     border: 3px solid var(--bank);
     transition: all 0.2s;
+    background-color: var(--bg-bank);
 }
 
 .luchar{
-    color: var(--resets);
+    color: var(--white);
     border: 3px solid var(--resets);
     transition: all 0.2s;
+    background-color: var(--bg-reset);
 }
 
 .luchar:hover{
