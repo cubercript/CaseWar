@@ -13,6 +13,165 @@
 </head>
 <body class="body">
 
+    <div id="preFightBox" class="preFightBox max align-middle justify-middle oculto">
+        <div class="preFight align-middle justify-middle flex column radius">
+            <h1 class="preFightTitle">¡Preparados para la batalla!</h1>
+            <p class="preFightText">El bot lanzará la ruleta y tendréis que tirar los dados para saber quien gana.</p>
+            <p class="preFightText">Quien consiga derribar al enemigo, <strong><u>ganará el coste de las armas en conjunto.</u></strong></p>
+            <p class="preFightText">Quien salga derrotado, <strong><u>pagará el coste de las armas en conjunto.</u></strong></p>
+            
+            <ul class="preFightText">
+                <li>Superioridad de <strong><u>daño +10%</u></strong> de suerte. </li><br>
+                <li>Superioridad de <strong><u>tipo +50%</u></strong> de suerte.</li><br>
+                <li>Superioridad de <strong><u>rareza +5%</u></strong> de suerte.</li><br>             
+                <li>Superioridad de <strong><u>valor +5%</u></strong> de suerte.</li>                
+            </ul>
+
+            <button id="continueFight" class="tirarCaja radius">Continuar</button>
+
+        </div>
+    </div>
+
+    <div id="fightBox" class="fightBox max align-middle justify-middle oculto">
+
+        <div class="fight align-middle justify-middle flex radius">
+
+            <div id="victory" class="victory max align-middle justify-middle oculto">
+                <h1 class="win victoryTitle">¡VICTORIA!</h1>
+            </div>
+
+            <div id="defeat" class="lost-bg max align-middle justify-middle oculto">
+                <h1 class="lost victoryTitle">¡DERROTA!</h1>
+            </div>
+
+            <div class="fightLeft left max align-middle justify-middle flex column">
+                <h2 class="fightTitle">¡Tira el dado!</h2>
+                
+
+                <!-- DADO -->
+                <div id="dice" class="dice radius align-middle justify-middle">
+
+                    <div id="clickDice" class="clickDice max radius"></div>
+
+                    <!-- 1 -->
+                    <div id="one" class="oneBox max radius align-middle justify-middle oculto">
+                        <div class="one radius"></div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div id="two" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius"></div>
+                        <div class="two2 radius"></div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div id="three" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius"></div>
+                        <div class="three3 radius"></div>
+                        <div class="two2 radius"></div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div id="four" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius"></div>
+                        <div class="four3 radius"></div>
+                        <div class="four4 radius"></div>
+                        <div class="two2 radius"></div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div id="five" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius"></div>
+                        <div class="four3 radius"></div>
+                        <div class="four4 radius"></div>
+                        <div class="two2 radius"></div>
+                        <div class="three3 radius"></div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div id="six" class="numberBoxDice max radius">
+                        <div class="two1 radius"></div>
+                        <div class="four3 radius"></div>
+                        <div class="four4 radius"></div>
+                        <div class="two2 radius"></div>
+                        <div class="six5 radius"></div>
+                        <div class="six6 radius"></div>
+                    </div>
+
+                </div>
+
+                <strong><p id="userLucky" class="win lucky"></p></strong>
+
+                <div id="lifeUserContainer" class="lifeUser radius align-middle text-center"><strong>HP</strong></div>
+
+                
+            </div>
+
+            <div class="fightRight right max align-middle justify-middle flex column">
+
+                <h2 class="fightTitle">¡Dado del enemigo!</h2>
+                
+
+                <!-- DADO -->
+                <div id="diceBot" class="diceBoxBot radius align-middle justify-middle">
+
+                    <!-- 1 -->
+                    <div id="oneBot" class="oneBox max radius align-middle justify-middle oculto">
+                        <div class="one radius diceBot"></div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div id="twoBot" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius diceBot"></div>
+                        <div class="two2 radius diceBot"></div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div id="threeBot" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius diceBot"></div>
+                        <div class="three3 radius diceBot"></div>
+                        <div class="two2 radius diceBot"></div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div id="fourBot" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius diceBot"></div>
+                        <div class="four3 radius diceBot"></div>
+                        <div class="four4 radius diceBot"></div>
+                        <div class="two2 radius diceBot"></div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div id="fiveBot" class="numberBoxDice max radius oculto">
+                        <div class="two1 radius diceBot"></div>
+                        <div class="four3 radius diceBot"></div>
+                        <div class="four4 radius diceBot"></div>
+                        <div class="two2 radius diceBot"></div>
+                        <div class="three3 radius diceBot"></div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div id="sixBot" class="numberBoxDice max radius">
+                        <div class="two1 radius diceBot"></div>
+                        <div class="four3 radius diceBot"></div>
+                        <div class="four4 radius diceBot"></div>
+                        <div class="two2 radius diceBot"></div>
+                        <div class="six5 radius diceBot"></div>
+                        <div class="six6 radius diceBot"></div>
+                    </div>
+
+                </div>
+
+                <strong><p id="botLucky" class="win lucky"></p></strong>
+
+                <div id="lifeBotContainer" class="lifeUser radius align-middle text-center"><strong>HP</strong></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- Menú principal / Saldo del jugador / Reinicios del jugador -->
     <header class="header flex align-middle">
 
@@ -31,6 +190,7 @@
                     <input class="oculto" type="number" id="bank" name="bank" value="500">
                     <strong><p id="money" class="money">Dinero: 500€</p></strong>
                     <strong><p id="money-event" class="money-event max align-middle text-center"></p></strong>
+                    <strong><p id="money-event-lost" class="money-event-lost max align-middle text-center"></p></strong>
                 </div>
                 
                 <div class="resets align-middle right">
@@ -46,7 +206,7 @@
 
     <!-- Cuadrado VS -->
     <div class="vs-content max align-middle justify-middle">
-        <p class="vs text-center align-middle radius">VS</p>
+        <p id="vs" class="vs text-center align-middle radius">VS</p>
     </div>
 
 
@@ -81,19 +241,19 @@
             <div class="table-container">
                 <table class="max">
                     <tr class="line">
-                        <td class="left-table weapon">Arma</td>
+                        <td class="left-table weapon" id="weapon-title">Arma</td>
                         <td class="right-table weapon" id="weapon"></td>
                     </tr>
                     <tr>
-                        <td class="left-table damage">Daño</td>
+                        <td class="left-table damage" id="damage-title">Daño</td>
                         <td class="right-table damage" id="damage"></td>
                     </tr>
                     <tr>
-                        <td class="left-table value">Valor</td>
+                        <td class="left-table value" id="value-title">Valor</td>
                         <td class="right-table value" id="value"></td>
                     </tr>
                     <tr>
-                        <td class="left-table-bottom type">Tipo</td>
+                        <td class="left-table-bottom type" id="type-title">Tipo</td>
                         <td class="right-table-bottom type" id="type"></td>
                     </tr>
                 </table>
@@ -122,19 +282,19 @@
             <div class="table-container">
                 <table class="max">
                     <tr class="line">
-                        <td class="left-table weapon">Arma</td>
+                        <td class="left-table weapon" id="bot-weapon-title">Arma</td>
                         <td class="right-table weapon" id="bot-weapon"></td>
                     </tr>
                     <tr>
-                        <td class="left-table damage">Daño</td>
+                        <td class="left-table damage" id="bot-damage-title">Daño</td>
                         <td class="right-table damage" id="bot-damage"></td>
                     </tr>
                     <tr>
-                        <td class="left-table value">Valor</td>
+                        <td class="left-table value" id="bot-value-title">Valor</td>
                         <td class="right-table value" id="bot-value"></td>
                     </tr>
                     <tr>
-                        <td class="left-table-bottom type">Tipo</td>
+                        <td class="left-table-bottom type" id="bot-type-title">Tipo</td>
                         <td class="right-table-bottom type" id="bot-type"></td>
                     </tr>
                 </table>
