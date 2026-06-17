@@ -99,6 +99,23 @@ tirarCajaButton.onclick = () => {
     bank = Number(bank) - 100;
     money.innerHTML = "Dinero: " + bank + "€";
 
+    // --> Activamos animación de banco
+    moneyEvent.innerHTML = "-100€";
+    moneyEvent.classList.add("lost");
+    moneyEvent.style.transform = "translateY(50px)";
+    moneyEvent.style.opacity = "0";
+
+
+    // --> Reseteamos la animación
+    setTimeout(() => {
+
+        moneyEvent.innerHTML = "";
+        moneyEvent.classList.remove("lost");
+        moneyEvent.style.transform = "translateY(0px)";
+        moneyEvent.style.opacity = "1";
+
+    }, 2000); // --> Aplicamos el tiempo que dura la animación en CSS
+
 
 
     // --> Iniciamos la preparación de la ruleta
