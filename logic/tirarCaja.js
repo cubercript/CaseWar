@@ -100,19 +100,19 @@ tirarCajaButton.onclick = () => {
     money.innerHTML = "Dinero: " + bank + "€";
 
     // --> Activamos animación de banco
-    moneyEvent.innerHTML = "-100€";
-    moneyEvent.classList.add("lost");
-    moneyEvent.style.transform = "translateY(50px)";
-    moneyEvent.style.opacity = "0";
+    moneyEventLost.innerHTML = "-100€";
+    moneyEventLost.classList.add("lost");
+    moneyEventLost.style.transform = "translateY(50px)";
+    moneyEventLost.style.opacity = "0";
 
 
     // --> Reseteamos la animación
     setTimeout(() => {
 
-        moneyEvent.innerHTML = "";
-        moneyEvent.classList.remove("lost");
-        moneyEvent.style.transform = "translateY(0px)";
-        moneyEvent.style.opacity = "1";
+        moneyEventLost.innerHTML = "";
+        moneyEventLost.classList.remove("lost");
+        moneyEventLost.style.transform = "translateY(0px)";
+        moneyEventLost.style.opacity = "1";
 
     }, 2000); // --> Aplicamos el tiempo que dura la animación en CSS
 
@@ -164,10 +164,39 @@ function tirarCajaOn(){
     tirarCajaButton.classList.remove("oculto");
 
     roulette.innerHTML = "";
+    botRoulette.innerHTML = "";
+
+
     weapon.innerHTML = "";
+    botWeapon.innerHTML = "";
     damage.innerHTML = "";
+    botDamage.innerHTML = "";
     value.innerHTML = "";
+    botValue.innerHTML = "";
     type.innerHTML = "";
+    botType.innerHTML = "";
+
+
+    damage.classList.remove('damage-win');
+    damageTitle.classList.remove('damage-win');
+    botDamage.classList.remove('damage-win');
+    botDamageTitle.classList.remove('damage-win');
+
+    value.classList.remove('value-win');
+    valueTitle.classList.remove('value-win');
+    botValue.classList.remove('value-win');
+    botValueTitle.classList.remove('value-win');
+
+    type.classList.remove('type-win');
+    typeTitle.classList.remove('type-win');
+    botType.classList.remove('type-win');
+    botTypeTitle.classList.remove('type-win');
+
+    vs.classList.remove("bg-lost");
+
+    defeat.classList.add("oculto");
+    victory.classList.add("oculto");
+
 
 }
 

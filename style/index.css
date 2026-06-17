@@ -97,8 +97,16 @@
     position: relative;
 }
 
-.money, .resetNumber, .money-event{
+.money, .resetNumber, .money-event, .money-event-lost{
     font-size: var(--fs-title-md);
+}
+
+.money-event{
+    color: var(--bank-win);
+}
+
+.money-event-lost{
+    color: var(--lost);
 }
 
 .resets{
@@ -262,19 +270,34 @@ td{padding: 15px;}
     color: var(--accent-blue);
 }
 
+.damage-win{
+    color: var(--white);
+    background-color: var(--accent-blue);
+}
+
 .value{
     color: var(--bank);
+}
+
+.value-win{
+    color: var(--white);
+    background-color: var(--bank);
 }
 
 .type{
     color: var(--accent-gold);
 }
 
+.type-win{
+    color: var(--white);
+    background-color: var(--accent-gold);
+}
 
 
 
 
-.money-event{
+
+.money-event, .money-event-lost{
 
     position: absolute;
     top: 0;
@@ -289,8 +312,179 @@ td{padding: 15px;}
     color: var(--lost);
 }
 
+.bg-lost{
+    background-color: var(--resets);
+}
+
 .win{
     color: var(--bank-win);
 }
 
 
+
+.preFightBox, .fightBox{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+}
+
+.preFight, .fight{
+
+    width: 80%;
+    height: 80%;
+    background-color: var(--bg-dark-show);
+    gap: 30px;
+    border: 2px solid var(--white);
+
+}
+
+.fight{
+    gap: 0;
+    position: relative;
+    background-color: var(--bg-dark);
+}
+
+.preFightText{
+    color: var(--white);
+    font-size: var(--fs-title-md);
+}
+
+.preFightTitle{
+    color: var(--lost);
+}
+
+.fightTitle{
+    color: var(--white);
+}
+
+
+.fightLeft{
+    gap: 50px;
+    border-right: 4px solid var(--resets);
+    position: relative;
+}
+
+.fightRight{
+    gap: 50px;
+    position: relative;
+}
+
+
+.dice{
+
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--primary);
+    position: relative;
+
+}
+
+.one, .two1, .two2, .three3, .four3, .four4, .five5, .six5, .six6{
+    
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+
+}
+
+
+.numberBoxDice{
+
+    position: relative;
+
+}
+
+.two1{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+.two2{
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+}
+
+
+.three3{
+
+    position: absolute;
+    top: 40%;
+    right: 40%;
+
+}
+
+.four3{
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+.four4{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+
+.six5{
+    position: absolute;
+    top: 41%;
+    left: 15%;
+}
+
+.six6{
+    position: absolute;
+    top: 41%;
+    right: 15%;
+}
+
+
+.diceBot{
+    background-color: var(--lost);
+}
+
+
+.diceBoxBot{
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--lost) !important;
+}
+
+
+.lucky{
+    font-size: var(--fs-title-md);
+}
+
+.clickDice{
+
+    position: absolute;
+    /* background-color: aliceblue; */
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.lifeUser{
+    width: 90%;
+    height: 30px;
+    background-color: var(--bank-win);
+    position: absolute;
+    bottom: 50px;
+    color: var(--white);
+    font-size: var(--fs-title-md);
+}
+
+
+.victory, .lost-bg{
+    position: absolute;
+    z-index: 50;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.victory{background-color: var(--bg-bank);}
+.lost-bg{background-color: var(--bg-reset);}

@@ -13,6 +13,7 @@
 
     /* Paleta de colores */
     --bg-dark: #0f1015;
+    --bg-dark-show: #0f1015a1;
     --bg-card: #191b24;
     --bg-bank: #2d80678c;
     --bg-reset: #933a3a82;
@@ -38,7 +39,7 @@
 
 
     /* Tamaño de texto */
-    --fs-hero: clamp(1.8rem, 4vw + 1rem, 2.8rem);
+    --fs-hero: clamp(1.8rem, 4vw + 1rem, 4.8rem);
     --fs-title-lg: clamp(1.4rem, 2.5vw + 1rem, 2rem);
     --fs-title-md: clamp(1.1rem, 1.5vw + 1rem, 1.35rem);
     --fs-body: clamp(0.95rem, 0.5vw + 0.8rem, 1.05rem);
