@@ -28,11 +28,13 @@
             <div class="status flex radius">
 
                 <div class="bank align-middle left">
-                    <p id="bank"><strong>Dinero: 0€</strong></p>
+                    <input class="oculto" type="number" id="bank" name="bank" value="500">
+                    <strong><p id="money">Dinero: 500€</p></strong>
                 </div>
                 
                 <div class="resets align-middle right">
-                    <p id="resets"><strong>Resets: 0</strong></p>
+                    <input class="oculto" type="number" id="resets" name="resets" value="0">
+                    <strong><p id="totalResets">Resets: 0</p></strong>
                 </div>
 
             </div>
@@ -54,10 +56,10 @@
         <div class="user-desktop left align-middle justify-middle flex column">
 
             <!-- Caja de la ruleta -->
-            <div class="box-roulette radius">
+            <div id="box-roulette" class="box-roulette radius">
 
                 <!-- Items de la ruleta -->
-                <div id="roulette" class="roulette"></div>
+                <div id="roulette" class="roulette max align-middle"></div>
 
 
                 <!-- Botones en absolute dentro de la ruleta -->
@@ -104,7 +106,7 @@
         <!-- Lateral derecho (bot) -->
         <div class="right align-middle justify-middle flex column">
             <!-- Caja de la ruleta -->
-            <div class="box-roulette radius">
+            <div id="bot-box-roulette" class="box-roulette radius">
 
                 <!-- Items de la ruleta -->
                 <div id="bot-roulette" class="roulette"></div>

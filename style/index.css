@@ -78,6 +78,7 @@
 }
 
 
+
 .status{
 
     width: 350px;
@@ -105,13 +106,43 @@
     
     width: 300px;
     min-width: 300px;
+    max-width: 301px;
     height: 300px;
     min-height: 300px;
+    max-height: 301px;
     border: 2px solid var(--text-muted);
     overflow: hidden;
     margin-top: 100px;
+    position: relative;
 
 }
+
+
+.roulette{
+
+    display: flex;
+    /* background: var(--white); */
+    position: absolute;
+
+}
+
+.item{
+
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card);
+
+}
+
+img{
+    object-fit:contain; 
+    /* object-position: center top; */
+}
+
 
 .buttons{
     gap: 30px;
