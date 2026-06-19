@@ -50,7 +50,7 @@ var userLucky = document.getElementById("userLucky");
 var lifeUserContainer = document.getElementById("lifeUserContainer");
 var victory = document.getElementById("victory");
 var defeat = document.getElementById("defeat");
-
+var autoDiceButton = document.getElementById("autoDiceButton");
 
 // --> VS
 var vs = document.getElementById("vs");
