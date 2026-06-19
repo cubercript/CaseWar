@@ -5,6 +5,7 @@
 let popUpInfo = 0;
 let lifeUser = 500;
 let lifeBot = 500;
+var autoFight = false;
 
 
 
@@ -45,6 +46,7 @@ function startRouletteBot(){
     // --> Preparamos la ruleta
 
     vs.classList.add("bg-lost");
+    autoFight = false;
 
     // --> Forzar reinicio de la ruleta y sus animaciones para aplicarlas más adelante
     botRoulette.innerHTML = "";
@@ -385,7 +387,16 @@ function startFight(){
 
         clickDice.onclick = () => {
 
-            giroDados(totalLuckyUser, totalLuckyBot, user, bot);
+            giroDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
+
+        }
+
+
+        autoDiceButton.onclick = () => {
+
+            autoFight = true;
+            tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
+
         }
 
     }, 4000);
@@ -395,7 +406,7 @@ function startFight(){
 
 
 // --> Hacemos un async para avisar que esta función puede contener pausas dentro de un bucle
-async function giroDados(totalLuckyUser, totalLuckyBot, user, bot){
+async function giroDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight){
 
     clickDice.classList.add("oculto");
 
@@ -472,7 +483,7 @@ async function giroDados(totalLuckyUser, totalLuckyBot, user, bot){
 
     }
 
-    tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot);
+    tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
         
 
 }
@@ -480,7 +491,9 @@ async function giroDados(totalLuckyUser, totalLuckyBot, user, bot){
 
 
 
-function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot){
+function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight){
+
+    clickDice.classList.add("oculto");
 
     // --> Administramos todos los números de un dado con el mismo valor de probabilidad 1
     let one = 1;
@@ -620,9 +633,10 @@ function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot){
 
             // -- USUARIO HA MUERTO -- //
             defeat.classList.remove("oculto");
+            lifeUserContainer.style.width =  "0%";
 
             bank = Number(bank) - Number(user[2]) - Number(bot[2]);
-            money.innerHTML = "Dinero: " + bank;
+            money.innerHTML = "Dinero: " + bank + "€";
 
             // --> Activamos animación de banco
             moneyEventLost.innerHTML = "-" + (Number(user[2]) + Number(bot[2])) + "€";
@@ -651,6 +665,12 @@ function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot){
 
             }, 2000); // --> Aplicamos el tiempo que dura la animación en CSS
 
+        } else {
+
+            if(autoFight){
+                tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
+            }
+
         }
 
 
@@ -666,9 +686,10 @@ function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot){
 
             // -- BOT HA MUERTO -- //
             victory.classList.remove("oculto");
+            lifeBotContainer.style.width = "0%";
 
             bank = Number(bank) + Number(user[2]) + Number(bot[2]);
-            money.innerHTML = "Dinero: " + bank;
+            money.innerHTML = "Dinero: " + bank + "€";
 
             // --> Activamos animación de banco
             moneyEvent.innerHTML = "+" + (Number(user[2]) + Number(bot[2])) + "€";
@@ -697,14 +718,25 @@ function tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot){
 
             }, 2000); // --> Aplicamos el tiempo que dura la animación en CSS
 
+        } else {
+
+            if(autoFight){
+                tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
+            }
+
         }
+
 
 
     } else {
 
         // -- EMPATE -- //
+        if(autoFight){
+            tiradaDeDados(totalLuckyUser, totalLuckyBot, user, bot, autoFight);
+        }
 
     }
+
 
     clickDice.classList.remove("oculto");
 
