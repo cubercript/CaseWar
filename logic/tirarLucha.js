@@ -194,39 +194,45 @@ function startFight(){
     // --> Tipo - user
     switch (user[3]){
 
-        case "Corta distancia":
+        case "Cuerpo a cuerpo":
 
             typeUser = 0;
 
         break;
 
-        case "Media distancia":
+        case "Corta distancia":
 
             typeUser = 1;
 
         break;
 
-        case "Larga distancia":
+        case "Media distancia":
 
             typeUser = 2;
 
         break;
 
-        case "Tanque":
+        case "Larga distancia":
 
             typeUser = 3;
 
         break;
 
-        case "Anti-tanque":
+        case "Tanque":
 
             typeUser = 4;
 
         break;
 
-        case "Aéreo":
+        case "Anti-tanque":
 
             typeUser = 5;
+
+        break;
+
+        case "Aéreo":
+
+            typeUser = 6;
 
         break;
 
@@ -236,39 +242,45 @@ function startFight(){
     // --> Tipo - bot
     switch (bot[3]){
 
-        case "Corta distancia":
+        case "Cuerpo a cuerpo":
 
             typeBot = 0;
 
         break;
 
-        case "Media distancia":
+        case "Corta distancia":
 
             typeBot = 1;
 
         break;
 
-        case "Larga distancia":
+        case "Media distancia":
 
             typeBot = 2;
 
         break;
 
-        case "Tanque":
+        case "Larga distancia":
 
             typeBot = 3;
 
         break;
 
-        case "Anti-tanque":
+        case "Tanque":
 
             typeBot = 4;
 
         break;
 
-        case "Aéreo":
+        case "Anti-tanque":
 
             typeBot = 5;
+
+        break;
+
+        case "Aéreo":
+
+            typeBot = 6;
 
         break;
 

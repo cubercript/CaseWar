@@ -13,6 +13,7 @@
 </head>
 <body class="body">
 
+    <!-- Mensaje informativo de como se realiza una pelea -->
     <div id="preFightBox" class="preFightBox max align-middle justify-middle oculto">
         <div class="preFight align-middle justify-middle flex column radius">
             <h1 class="preFightTitle">¡Preparados para la batalla!</h1>
@@ -32,6 +33,7 @@
         </div>
     </div>
 
+    <!-- Zona de pelea -->
     <div id="fightBox" class="fightBox max align-middle justify-middle oculto">
 
         <div class="fight align-middle justify-middle flex radius">
@@ -214,6 +216,10 @@
     </div>
 
 
+    <!-- Botón para cambiar de fase -->
+    <button id="nextLevel" class="faseButton tirarCaja radius">> Siguiente fase: 1500€ <</button>
+
+
     <!-- Contenido de la página -->
     <main class="main flex">
 
@@ -317,6 +323,7 @@
     <script src="logic/tirarCaja.js"></script>
     <script src="logic/tirarLucha.js"></script>
     <script src="logic/vender.js"></script>
+    <script src="logic/level.js"></script>
 
 </body>
 </html>

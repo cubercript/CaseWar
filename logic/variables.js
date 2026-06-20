@@ -27,6 +27,7 @@ var roulette = document.getElementById("roulette");
 var tirarCajaButton = document.getElementById("tirarCaja");
 var venderArmaButton = document.getElementById("venderArma");
 var lucharButton = document.getElementById("luchar");
+var nextLevel = document.getElementById("nextLevel");
 
 
 
